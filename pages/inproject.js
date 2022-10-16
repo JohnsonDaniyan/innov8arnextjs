@@ -28,7 +28,7 @@ const Inproject = () => {
           <div className="line h-[1px] w-fill bg-black mt-2"></div>
           <div id="selector" className={`selector w-[31px] h-[7px] bg-green-600 rounded-b-xl absolute left-1/4 transition-all ease-in-out -translate-x-1/2 ${view === 1? " left-3/4" : ""}`}></div>
         </div>
-      </div>
+      </div> 
       <div id="text-container" className='relative'>
         <div className={`p-5 pt-10 text-black text-left bottom-0 overflow-hidden transition-all delay-300 duration-500${view===1? " opacity-0":""}`}>
             <small className={` block text-gray-400 text-xs transition-transform duration-1000 translate-x-0 ${view===1? " -translate-x-full":""}`}>Problem Statement</small>
