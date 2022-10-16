@@ -1,18 +1,24 @@
 import logo from '../images/logoPPT.png'
 import Image from 'next/image'
+import back from '../images/back.svg'
+import {useState, useEffect} from 'react'
+import dynamic from 'next/dynamic'
+import { Suspense } from 'react'
+
+const Viewer = dynamic(
+    () => import('../components/Viewer'),
+    { ssr: false }
+  )
+
 const Inproject = () => {
+    
+   const [view, setView] = useState(0)
     return <div className="inProject box-border m-5 h-screen">
     <div style={{background: "linear-gradient(180deg, #FFFFFF 0%, #E2E2E2 80.21%, #6A6A6A 100%)"}} className=' overflow-hidden relative h-[59.4%] w-fill border border-black rounded-2xl flex flex-col items-center justify-center'>
-        <img src={back} className="absolute top-[9.5px] left-[9.5px]" alt=''></img>
-          <model-viewer style={{width:"100%",height:"100%", zIndex:"2"}}
-                src="https://cdn.glitch.global/71a3fcfd-fd16-4ef7-9559-5fd983988732/VCS2-v1.glb?v=1665589215102"
-                ios-src="https://cdn.glitch.global/71a3fcfd-fd16-4ef7-9559-5fd983988732/VCS%20Compressed%20Glb.usdz?v=1665504474448"
-                alt="3D model of cooling solution"
-                shadow-intensity="1"
-                camera-controls
-                interaction-prompt="auto"
-                auto-rotate ar magic-leap>
-          </model-viewer>
+        <Image style={{position:"absolute"}} src={back} className="absolute top-[9.5px] left-[9.5px]" alt=''></Image>
+        <Suspense fallback={`Loading...`}>
+        <Viewer></Viewer>
+        </Suspense>
         <div className='w-full p-5 pt-10 text-white absolute text-left bottom-0'>
           <h1 className='font-bold text-2xl'>Vaccine Cooling System</h1>
           <p className='text-sm'>(VCS) pharmaceutical cooling solution</p>
