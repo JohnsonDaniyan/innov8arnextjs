@@ -12,8 +12,8 @@ const Viewer = () => (
         height:"100%",
     }}
     src="/vcs.glb"
-    ios-src=""
-    poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"
+    ios-src="/vcs.usdz"
+    poster="/cardimg.png"
     alt="A 3D model of an astronaut"
     shadow-intensity="1"
     camera-controls

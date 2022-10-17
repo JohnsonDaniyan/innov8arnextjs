@@ -13,9 +13,9 @@ const Viewer = dynamic(
 const Inproject = () => {
     
    const [view, setView] = useState(0)
-    return <div className="inProject box-border m-5 h-screen">
+    return <div className="inProject box-border p-5 h-screen">
     <div style={{background: "linear-gradient(180deg, #FFFFFF 0%, #E2E2E2 80.21%, #6A6A6A 100%)"}} className=' overflow-hidden relative h-[59.4%] w-fill border border-black rounded-2xl flex flex-col items-center justify-center'>
-        <Image style={{position:"absolute"}} src={back} className="absolute top-[9.5px] left-[9.5px]" alt=''></Image>
+        <div className=" z-10 absolute top-[9.5px] left-[9.5px]"><Image style={{position:"absolute"}} src={back} className="" alt=''></Image></div> 
         <Suspense fallback={`Loading...`}>
         <Viewer></Viewer>
         </Suspense>
