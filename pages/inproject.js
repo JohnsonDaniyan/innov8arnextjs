@@ -20,7 +20,7 @@ const Inproject = () => {
         <Viewer></Viewer> 
         </Suspense>
         <div className='w-full p-5 pt-10 text-white absolute text-left bottom-0'>
-          <h1 className='font-bold text-2xl'>Vaccine Cooling System</h1>
+          <h1 className='font-bold text-2xl'>~Vaccine Cooling System</h1>
           <p className='text-sm'>(VCS) pharmaceutical cooling solution</p>
       </div>
     </div>
