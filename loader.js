@@ -8,6 +8,7 @@ export default `
 }
 body{
     background-color:#fff
+    overflow:hidden;
   }
   .logoholder{
     position: relative;

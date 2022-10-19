@@ -17,7 +17,7 @@ function Card() {
             <p className=' text-xs'>
                 (VCS) pharmaceutical cooling solution
             </p>
-            <p className=' text-sm'>
+            <p className=' text-sm mt-2'>
                 In this project we aim to aleviate issues through an innovative solution 
             </p>
         </div>

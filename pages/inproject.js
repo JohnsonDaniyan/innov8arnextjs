@@ -25,7 +25,7 @@ const Inproject = () => {
         <Viewer></Viewer> 
         </Suspense>
         <div className='w-full p-5 pt-10 text-white absolute text-left bottom-0'>
-          <h1 className='font-bold text-2xl'>~Vaccine Cooling System</h1>
+          <h1 className='font-bold text-2xl'>Vaccine Cooling System</h1>
           <p className='text-sm'>(VCS) pharmaceutical cooling solution</p>
       </div>
     </div>
@@ -37,7 +37,7 @@ const Inproject = () => {
         </div> 
         <div className="linecont relative">
           <div className="line h-[1px] w-fill bg-black mt-2"></div>
-          <div id="selector" className={`selector w-[31px] h-[7px] bg-green-600 rounded-b-xl absolute left-1/4 transition-all ease-in-out -translate-x-1/2 ${view === 1? " left-3/4" : ""}`}></div>
+          <div id="selector" className={`selector w-[45px] h-[7px] bg-green-600 rounded-b-xl absolute left-1/4 transition-all ease-in-out -translate-x-1/2 ${view === 1? " left-3/4" : ""}`}></div>
         </div>
       </div> 
       <div id="text-container" className='relative'>
@@ -46,7 +46,7 @@ const Inproject = () => {
             <h1 className={`font-bold text-2xl transition-all delay-150  duration-500 translate-x-0${view===1? "  -translate-x-full":""}`}>Vaccine Cooling System</h1>
             <p className={`block text-sm transition-transform delay-250  duration-500 translate-x-0${view===1? " -translate-x-full":""}`}>The ever-present issue of cooling and storage of pharmaceutical instruments has taken a toll on the health industry of Nigeria, in this project we aim to aleviate issues through an innovative solution </p>
         </div> 
-        <div className={` absolute w-fill top-0 p-5 pt-10 text-black text-left bottom-0 overflow-hidden transition-opacity duration-500 opacity-0${view===1? "delay-1000 opacity-1":""}`}>
+        <div className={` absolute w-fill top-0 p-5 pt-10 text-black text-left bottom-0 overflow-hidden transition-opacity duration-500 opacity-0 ${view!==0? "delay-500 opacity-100":""}`}>
             <small className={`block text-gray-400 text-xs  -translate-x-full transition-transform delay-300 ${view!==0? " translate-x-1":""} `}>Proposed Solution</small>
             <h1 className={`font-bold text-2xl -translate-x-full transition-transform delay-500 ${view!==0? " translate-x-1":""} `}>Vaccine Cooling System</h1>
             <p className={`text-sm -translate-x-full transition-transform delay-700 ${view!==0? " translate-x-1":""} `}>Proposed solution here</p>
