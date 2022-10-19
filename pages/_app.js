@@ -3,11 +3,14 @@ import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-            const loader = document.getElementById('globalLoader');
-        if (loader)
+    setTimeout(()=>{
+      if (typeof window !== 'undefined') {
+        const loader = document.getElementById('globalLoader');
+      if (loader)
             loader.style.display = 'none';
-    }
+      }
+    },4000)
+    
 }, []);
   return <Component {...pageProps} />
 }
