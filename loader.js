@@ -6,6 +6,9 @@ export default `
     justify-content:center;
     align-items:center;
 }
+#{
+  overflow:hidden;
+}
 body{
     background-color:#fff
     overflow:hidden;

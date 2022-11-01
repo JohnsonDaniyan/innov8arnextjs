@@ -14,8 +14,8 @@ const Viewer = dynamic(
 const Inproject = () => {
     
    const [view, setView] = useState(0)
-    return <div className="inProject box-border p-5 h-screen">
-    <div style={{background: "linear-gradient(180deg, #FFFFFF 0%, #E2E2E2 80.21%, #6A6A6A 100%)"}} className=' overflow-hidden relative h-[59.4%] w-fill border border-black rounded-2xl flex flex-col items-center justify-center'>
+    return <div className="inProject box-border p-5 h-screen  bg-gray-100">
+    <div className=' bg-inherit md:bg-gray-100 overflow-hidden relative md:inline-block md:w-2/3 md:h-full h-[59.4%] w-fill rounded-2xl flex flex-col items-center justify-center'>
         <div className=" z-10 absolute top-[9.5px] left-[9.5px]">
           <Link  href='/'>
           <Image style={{position:"absolute"}} src={back} className="" alt=''></Image>
@@ -24,12 +24,12 @@ const Inproject = () => {
         <Suspense fallback={`Loading...`}>
         <Viewer></Viewer> 
         </Suspense>
-        <div className='w-full p-5 pt-10 text-white absolute text-left bottom-0'>
+        <div style={{zIndex:"-1"}} className='w-full p-5 pt-10 text-black absolute text-left bottom-0 '>
           <h1 className='font-bold text-2xl'>Vaccine Cooling System</h1>
           <p className='text-sm'>(VCS) pharmaceutical cooling solution</p>
       </div>
     </div>
-    <div className="info w-fill box-border mt-5">
+    <div className="info w-fill md:w-1/3 md:float-right box-border mt-5">
       <div className="switcher w-fill">
         <div className="text w-fill flex justify-around"> 
           <div className="text1 text-center cursor-pointer font-bold text-gray-500" onClick={()=>{setView(0)}}>Problem Statement</div>
@@ -49,7 +49,7 @@ const Inproject = () => {
         <div className={` absolute w-fill top-0 p-5 pt-10 text-black text-left bottom-0 overflow-hidden transition-opacity duration-500 opacity-0 ${view!==0? "delay-500 opacity-100":""}`}>
             <small className={`block text-gray-400 text-xs  -translate-x-full transition-transform delay-300 ${view!==0? " translate-x-1":""} `}>Proposed Solution</small>
             <h1 className={`font-bold text-2xl -translate-x-full transition-transform delay-500 ${view!==0? " translate-x-1":""} `}>Vaccine Cooling System</h1>
-            <p className={`text-sm -translate-x-full transition-transform delay-700 ${view!==0? " translate-x-1":""} `}>Proposed solution here</p>
+            <p className={`sm:text-black text-sm -translate-x-full transition-transform transition-delay: 700ms; delay-700 ${view!==0? " translate-x-1":""} `}>Proposed solution here</p>
         </div>
       </div>
     </div>

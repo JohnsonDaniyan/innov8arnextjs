@@ -4,7 +4,7 @@ const Viewer = () => (
   <div id="card" style={{
     width:"100%",
     height:"100%",
-    zIndex:"2"
+    zIndex:"10"
 }}>
   <model-viewer
     style={{
