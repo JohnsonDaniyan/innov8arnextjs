@@ -11,8 +11,7 @@ const Viewer = () => (
         width:"100%",
         height:"100%",
     }}
-    src="/vcs.glb"
-    ios-src="/vcs.usdz"
+    src="https://d2zes9ifb0ot5n.cloudfront.net/VCS+(1).usdz"
     poster="/cardimg.png"
     alt="A 3D model of an astronaut"
     shadow-intensity="1"

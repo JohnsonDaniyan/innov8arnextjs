@@ -3,22 +3,22 @@ import cardimg from '../images/cardimg.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-function Card() {
+function Card(props) {
   return (
-    <Link href='/inproject'>
+    <Link href={`/project/${props.name}`} >
         <div className='flex items-center bg-white w-fill p-5 border-black border-solid border rounded-lg relative'>
             
             <Image style={{position:"relative",height:"100%"}} className='relative self-center' src={cardimg} alt="" />
             
             <div className='text-right border-black md:text-left' >
                 <h1 className='font-bold text-sm'>
-                    Vaccine Cooling System
+                    {props.name}
                 </h1>
                 <p className=' text-xs'>
-                    (VCS) pharmaceutical cooling solution
+                    {props.sub}
                 </p>
                 <p className=' text-sm mt-2'>
-                    In this project we aim to aleviate issues through an innovative solution 
+                    {props.desc}
                 </p>
             </div>
         </div>

@@ -5,6 +5,7 @@ import {useState, useEffect} from 'react'
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Viewer = dynamic(
     () => import('../components/Viewer'),
@@ -12,7 +13,9 @@ const Viewer = dynamic(
   )
 
 const Inproject = () => {
-    
+  const router = useRouter()
+  const { name } = router.query
+  
    const [view, setView] = useState(0)
     return <div className="inProject box-border p-5 h-screen  bg-gray-100">
     <div className=' bg-inherit md:bg-gray-100 overflow-hidden relative md:inline-block md:w-2/3 md:h-full h-[59.4%] w-fill rounded-2xl flex flex-col items-center justify-center'>
