@@ -51,7 +51,7 @@ function Project() {
     // console.log(project.name)
     
     return (
-        <div className="inProject box-border p-5 h-screen  bg-gray-100">
+        <div className="inProject box-border p-5 h-screen  bg-gray-100 flex flex-col">
         <div className=' bg-inherit md:bg-gray-100 overflow-hidden relative  h-[59.4%] w-fill rounded-2xl flex flex-col items-center justify-center'>
             <div className=" z-20 absolute top-[9.5px] left-[9.5px]">
               <Link  href='/'>
@@ -66,7 +66,7 @@ function Project() {
               <p className='text-sm'>(VCS) pharmaceutical cooling solution</p>
           </div>
         </div>
-        <div className="info w-fill  box-border mt-5">
+        <div className="info w-fill  box-border mt-5 flex-grow">
           <div className="switcher w-fill">
             <div className="text w-fill flex justify-around"> 
               <div className="text1 text-center cursor-pointer font-bold w-1/2 text-gray-500" onClick={()=>{setView(0)}}>Problem Statement</div>
@@ -77,13 +77,13 @@ function Project() {
               <div id="selector" className={`selector w-[45px] h-[7px] bg-green-600 rounded-b-xl absolute left-1/4 transition-all ease-in-out -translate-x-1/2 ${view === 1? " left-3/4" : ""}`}></div>
             </div>
           </div> 
-          <div id="text-container" className='relative'>
-            <div className={` py-5 text-black text-left bottom-0 overflow-hidden transition-all delay-300 duration-500${view===1? " opacity-0":""}`}>
+          <div id="text-container" className='relative h-full'>
+            <div className={` py-2 text-black text-left bottom-0 overflow-hidden transition-all delay-300 duration-500${view===1? " opacity-0":""}`}>
                 <small className={` block text-gray-400 text-xs transition-transform duration-1000 translate-x-0 ${view===1? " -translate-x-full":""}`}>Problem Statement</small>
                 <h1 className={`font-bold text-2xl transition-all delay-150  duration-500 translate-x-0${view===1? "  -translate-x-full":""}`}>{proname}</h1>
                 <p className={`block text-sm transition-transform delay-250  duration-500 translate-x-0${view===1? " -translate-x-full":""}`}>The ever-present issue of cooling and storage of pharmaceutical instruments has taken a toll on the health industry of Nigeria, in this project we aim to aleviate issues through an innovative solution </p>
             </div> 
-            <div className={` absolute w-full top-0 py-10 text-black text-left bottom-0 overflow-hidden transition-opacity duration-500 opacity-0 ${view!==0? "delay-500 opacity-100":""}`}>
+            <div className={` absolute w-full h-full top-0 py-10 text-black text-left bottom-0 overflow-hidden transition-opacity duration-500 opacity-0 ${view!==0? "delay-500 opacity-100":""}`}>
                 <small className={`block text-gray-400 text-xs  -translate-x-full transition-transform delay-300 ${view!==0? " translate-x-1":""} `}>Proposed Solution</small>
                 <YoutubeEmbed embedId="ASh1Pm8SJ-s"/>
             </div>
