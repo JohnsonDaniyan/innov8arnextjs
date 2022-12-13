@@ -6,57 +6,71 @@ import {useState, useEffect} from 'react'
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 import Link from 'next/link'
+import {AiFillYoutube} from 'react-icons/ai'
+import YoutubeEmbed from '../../components/youtubeEmbed/YoutubeEmbed'
+
 const Viewer = dynamic(
     () => import('../../components/Viewer'),
     { ssr: false }
   )
-
-
-const projects = [
+  export const projects = [
     {
       "name":"Vaccine Cooling System",
       "sub":"(vcs)",
-      "desc":"vcs",
+      "desc":"",
+      "link":"https://d2zes9ifb0ot5n.cloudfront.net/vcs.glb"
     },
     {
-      "name":"vcs",
-      "sub":"vcs",
-      "desc":"vcs",
+        "name":"Mobility",
+        "sub":"Mobility",
+        "desc":"Description here for Mob",
+        "link":"https://d2zes9ifb0ot5n.cloudfront.net/Mobility.glb",
     },
     {
-      "name":"tcs",
-      "sub":"vcs",
-      "desc":"vcs",
-    }
+        "name":"Egg Incubator",
+        "sub":"Egg Incubator",
+        "desc":"Description here for EI",
+        "link":"https://d2zes9ifb0ot5n.cloudfront.net/Egg+incubator1.glb",
+    },
+    {
+      "name":"Mushroom Farm",
+      "sub":"Mushroom Farm",
+      "desc":"Description here for MF",
+      "link":"https://d2zes9ifb0ot5n.cloudfront.net/mushroom+farm4.glb",
+    },
   ]
 
 function Project() {
     const router = useRouter()
-    const { proname } = router.query
-    let project = projects[projects.findIndex((project) => project.name === proname)]
-    const [view, setView] = useState(0)
+    const { proname } = router.query;
+    console.log({proname});
+    let index = projects[projects.findIndex((project) => project.name === proname)];
+    const [view, setView] = useState(0);
+    console.log(index);
+
+    // console.log(project.name)
     
     return (
         <div className="inProject box-border p-5 h-screen  bg-gray-100">
-        <div className=' bg-inherit md:bg-gray-100 overflow-hidden relative md:inline-block md:w-2/3 md:h-full h-[59.4%] w-fill rounded-2xl flex flex-col items-center justify-center'>
-            <div className=" z-10 absolute top-[9.5px] left-[9.5px]">
+        <div className=' bg-inherit md:bg-gray-100 overflow-hidden relative  h-[59.4%] w-fill rounded-2xl flex flex-col items-center justify-center'>
+            <div className=" z-20 absolute top-[9.5px] left-[9.5px]">
               <Link  href='/'>
               <Image style={{position:"absolute"}} src={back} className="" alt=''></Image>
               </Link>
               </div> 
             <Suspense fallback={`Loading...`}>
-            <Viewer></Viewer> 
+            <Viewer ></Viewer> 
             </Suspense>
             <div style={{zIndex:"-1"}} className='w-full p-5 pt-10 text-black absolute text-left bottom-0 '>
-              <h1 className='font-bold text-2xl'>Vaccine Cooling System</h1>
+              <h1 className='font-bold text-2xl'> {proname} </h1>
               <p className='text-sm'>(VCS) pharmaceutical cooling solution</p>
           </div>
         </div>
-        <div className="info w-fill md:w-1/3 md:float-right box-border mt-5">
+        <div className="info w-fill  box-border mt-5">
           <div className="switcher w-fill">
             <div className="text w-fill flex justify-around"> 
-              <div className="text1 text-center cursor-pointer font-bold text-gray-500" onClick={()=>{setView(0)}}>Problem Statement</div>
-              <div className="text2 text-center cursor-pointer font-bold text-gray-500" onClick={()=>{setView(1)}}>Proposed Solution</div>
+              <div className="text1 text-center cursor-pointer font-bold w-1/2 text-gray-500" onClick={()=>{setView(0)}}>Problem Statement</div>
+              <div className="text2 text-center cursor-pointer font-bold w-1/2 flex items-center justify-center gap-2 text-gray-500" onClick={()=>{setView(1)}}>Proposed Solution <AiFillYoutube className=' text-red-600'/></div>
             </div> 
             <div className="linecont relative">
               <div className="line h-[1px] w-fill bg-black mt-2"></div>
@@ -64,15 +78,14 @@ function Project() {
             </div>
           </div> 
           <div id="text-container" className='relative'>
-            <div className={`p-5 pt-10 text-black text-left bottom-0 overflow-hidden transition-all delay-300 duration-500${view===1? " opacity-0":""}`}>
+            <div className={` py-5 text-black text-left bottom-0 overflow-hidden transition-all delay-300 duration-500${view===1? " opacity-0":""}`}>
                 <small className={` block text-gray-400 text-xs transition-transform duration-1000 translate-x-0 ${view===1? " -translate-x-full":""}`}>Problem Statement</small>
-                <h1 className={`font-bold text-2xl transition-all delay-150  duration-500 translate-x-0${view===1? "  -translate-x-full":""}`}>Vaccine Cooling System</h1>
+                <h1 className={`font-bold text-2xl transition-all delay-150  duration-500 translate-x-0${view===1? "  -translate-x-full":""}`}>{proname}</h1>
                 <p className={`block text-sm transition-transform delay-250  duration-500 translate-x-0${view===1? " -translate-x-full":""}`}>The ever-present issue of cooling and storage of pharmaceutical instruments has taken a toll on the health industry of Nigeria, in this project we aim to aleviate issues through an innovative solution </p>
             </div> 
-            <div className={` absolute w-fill top-0 p-5 pt-10 text-black text-left bottom-0 overflow-hidden transition-opacity duration-500 opacity-0 ${view!==0? "delay-500 opacity-100":""}`}>
+            <div className={` absolute w-full top-0 py-10 text-black text-left bottom-0 overflow-hidden transition-opacity duration-500 opacity-0 ${view!==0? "delay-500 opacity-100":""}`}>
                 <small className={`block text-gray-400 text-xs  -translate-x-full transition-transform delay-300 ${view!==0? " translate-x-1":""} `}>Proposed Solution</small>
-                <h1 className={`font-bold text-2xl -translate-x-full transition-transform delay-500 ${view!==0? " translate-x-1":""} `}>Vaccine Cooling System</h1>
-                <p className={`sm:text-black text-sm -translate-x-full transition-transform transition-delay: 700ms; delay-700 ${view!==0? " translate-x-1":""} `}>Proposed solution here</p>
+                <YoutubeEmbed embedId="ASh1Pm8SJ-s"/>
             </div>
           </div>
         </div>

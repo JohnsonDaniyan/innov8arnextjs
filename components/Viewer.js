@@ -5,16 +5,16 @@ import axios from 'axios'
 
 const Viewer = () => { 
 
-  const getModel = async () => {
-    await axios.get("https://d2zes9ifb0ot5n.cloudfront.net/Egg+incubator1.glb")
-    .then((res) => {
-        dispatch(getFootballersData(res.data))
-        console.log(res.data)
-    })
-}
-useEffect(() => {
-  getModel()
-},[])
+//   const getModel = async () => {
+//     await axios.get("https://d2zes9ifb0ot5n.cloudfront.net/Egg+incubator1.glb")
+//     .then((res) => {
+//         dispatch(getFootballersData(res.data))
+//         console.log(res.data)
+//     })
+// }
+// useEffect(() => {
+//   getModel()
+// },[])
 
 
   return(
@@ -28,7 +28,7 @@ useEffect(() => {
         width:"100%",
         height:"100%",
     }}
-    src="https://d2zes9ifb0ot5n.cloudfront.net/Egg+incubator1.glb"
+    src="https://d2zes9ifb0ot5n.cloudfront.net/Mobility.glb"
     poster="/cardimg.png"
     alt="A 3D model of an astronaut"
     shadow-intensity="1"

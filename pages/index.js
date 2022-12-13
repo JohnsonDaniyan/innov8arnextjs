@@ -4,27 +4,9 @@ import styles from '../styles/Home.module.css'
 import Card from "../components/Card"
 import headerbg from '../images/headerbg.png'
 import Link from 'next/link'
+import {projects} from '../data'
 
-
-
-const projects = [
-  {
-    "name":"Vaccine Cooling System",
-    "sub":"(vcs)",
-    "desc":"vcs",
-  },
-  {
-    "name":"vcs",
-    "sub":"vcs",
-    "desc":"vcs",
-  },
-  {
-    "name":"vcs",
-    "sub":"vcs",
-    "desc":"vcs",
-  }
-]
-
+console.log(projects) 
 export default function Home() {
   console.log({projects});
   console.log(projects[0].name)
@@ -39,7 +21,7 @@ export default function Home() {
         <main className='flex flex-col flex-grow box-border m-5 justify-evenly md:px-[10vw]'>
           {projects.map((project)=>{
             return(
-            <Card key={project.name} name={project.name} sub={project.sub} desc={project.desc}></Card>
+            <Card key={project.name} name={project.name} sub={project.sub} desc={project.desc} link={project.link}></Card>
             )
           })}  
         </main>
