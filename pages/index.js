@@ -6,6 +6,19 @@ import headerbg from '../images/headerbg.png'
 import Link from 'next/link'
 import {projects} from '../data'
 
+
+function importAll(r) {
+  let images = {};
+  r.keys().map((item, index) => {
+    images[item.replace("./", "")] = r(item);
+  });
+  return images;
+}
+
+const images = importAll(
+  require.context("../public/images", false, /\.(png|jpe?g|svg)$/)
+);
+
 console.log(projects) 
 export default function Home() {
   console.log({projects});

@@ -9,6 +9,7 @@ import Link from 'next/link'
 import {AiFillYoutube} from 'react-icons/ai'
 import YoutubeEmbed from '../../components/youtubeEmbed/YoutubeEmbed'
 
+
 const Viewer = dynamic(
     () => import('../../components/Viewer'),
     { ssr: false }
