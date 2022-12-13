@@ -7,17 +7,6 @@ import Link from 'next/link'
 import {projects} from '../data'
 
 
-function importAll(r) {
-  let images = {};
-  r.keys().map((item, index) => {
-    images[item.replace("./", "")] = r(item);
-  });
-  return images;
-}
-
-const images = importAll(
-  require.context("../public/images", false, /\.(png|jpe?g|svg)$/)
-);
 
 console.log(projects) 
 export default function Home() {
@@ -34,7 +23,7 @@ export default function Home() {
         <main className='flex flex-col flex-grow box-border m-5 justify-evenly md:px-[10vw]'>
           {projects.map((project)=>{
             return(
-            <Card key={project.name} name={project.name} sub={project.sub} desc={project.desc} link={project.link}></Card>
+            <Card key={project.name} name={project.name} sub={project.sub} desc={project.desc} img={project.img}></Card>
             )
           })}  
         </main>

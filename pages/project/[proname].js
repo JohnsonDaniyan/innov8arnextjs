@@ -8,47 +8,45 @@ import { Suspense } from 'react'
 import Link from 'next/link'
 import {AiFillYoutube} from 'react-icons/ai'
 import YoutubeEmbed from '../../components/youtubeEmbed/YoutubeEmbed'
-
+import projects from '../../data'
 
 const Viewer = dynamic(
     () => import('../../components/Viewer'),
     { ssr: false }
   )
-  export const projects = [
-    {
-      "name":"Vaccine Cooling System",
-      "sub":"(vcs)",
-      "desc":"",
-      "link":"https://d2zes9ifb0ot5n.cloudfront.net/vcs.glb"
-    },
-    {
-        "name":"Mobility",
-        "sub":"Mobility",
-        "desc":"Description here for Mob",
-        "link":"https://d2zes9ifb0ot5n.cloudfront.net/Mobility.glb",
-    },
-    {
-        "name":"Egg Incubator",
-        "sub":"Egg Incubator",
-        "desc":"Description here for EI",
-        "link":"https://d2zes9ifb0ot5n.cloudfront.net/Egg+incubator1.glb",
-    },
-    {
-      "name":"Mushroom Farm",
-      "sub":"Mushroom Farm",
-      "desc":"Description here for MF",
-      "link":"https://d2zes9ifb0ot5n.cloudfront.net/mushroom+farm4.glb",
-    },
-  ]
+  // export const projects = [
+  //   {
+  //     "name":"Vaccine Cooling System",
+  //     "sub":"(vcs)",
+  //     "desc":"",
+  //     "link":"https://d2zes9ifb0ot5n.cloudfront.net/vcs.glb"
+  //   },
+  //   {
+  //       "name":"Mobility",
+  //       "sub":"Mobility",
+  //       "desc":"Description here for Mob",
+  //       "link":"https://d2zes9ifb0ot5n.cloudfront.net/Mobility.glb",
+  //   },
+  //   {
+  //       "name":"Egg Incubator",
+  //       "sub":"Egg Incubator",
+  //       "desc":"Description here for EI",
+  //       "link":"https://d2zes9ifb0ot5n.cloudfront.net/Egg+incubator1.glb",
+  //   },
+  //   {
+  //     "name":"Mushroom Farm",
+  //     "sub":"Mushroom Farm",
+  //     "desc":"Description here for MF",
+  //     "link":"https://d2zes9ifb0ot5n.cloudfront.net/mushroom+farm4.glb",
+  //   },
+  // ]
 
 function Project() {
     const router = useRouter()
     const { proname } = router.query;
-    console.log({proname});
-    let index = projects[projects.findIndex((project) => project.name === proname)];
+    
     const [view, setView] = useState(0);
-    console.log(index);
-
+  console.log(projects.proname)
     // console.log(project.name)
     
     return (
