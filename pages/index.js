@@ -7,7 +7,6 @@ import Link from 'next/link'
 
 
 
-
 const projects = [
   {
     "name":"Vaccine Cooling System",
