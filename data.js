@@ -2,8 +2,8 @@
  export const projects = [
   {
     "name":"Soiless Farm",
-    "sub":"Mushroom Farm",
-    "desc":"Description here for MF",
+    "sub":"Irrigation System",
+    "desc":"",
     "link":"https://d2zes9ifb0ot5n.cloudfront.net/Soiless+farm/flooding.glb",
     "img":"https://d2zes9ifb0ot5n.cloudfront.net/Soiless+Farm/Soiless+cut1.91.238.png"
   },
@@ -22,7 +22,7 @@
       "img":"https://d2zes9ifb0ot5n.cloudfront.net/Images/Vaccine+Cooling+System.png"
     },
     {
-        "name":"Mobility",
+        "name":"People's Mobility",
         "sub":"Mobility",
         "desc":"",
         "link":"https://d2zes9ifb0ot5n.cloudfront.net/Mobility.glb",
@@ -38,14 +38,14 @@
     {
         "name":"Egg Incubator",
         "sub":"Egg Incubator",
-        "desc":"smart egg incubator",
+        "desc":"Smart Egg Incubator",
         "link":"https://d2zes9ifb0ot5n.cloudfront.net/Egg+incubator1.glb",
         "img":"https://d2zes9ifb0ot5n.cloudfront.net/Images/Egg+Incubator.png"
     },
     {
       "name":"Walking Aid",
-      "sub":"Mushroom Farm",
-      "desc":"Description here for MF",
+      "sub":"Prostetic",
+      "desc":"",
       "link":"https://d2zes9ifb0ot5n.cloudfront.net/Walking+Aid/walking+aid2.glb",
       "img":"https://d2zes9ifb0ot5n.cloudfront.net/Walking+Aid/walking+aid2.66.34.png"
     },

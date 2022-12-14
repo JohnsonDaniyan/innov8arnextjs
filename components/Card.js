@@ -8,7 +8,7 @@ function Card(props) {
     console.log(props)
   return (
     <Link href={`/project/${props.name}`} >
-        <div className='cursor-pointer mb-10 flex items-center bg-white w-fill p-5 border-black border-solid border rounded-lg relative'>
+        <div className='cursor-pointer mb-10 flex items-center bg-white w-fill p-5 border-black border-solid border rounded-lg relative max-w-20'>
             
             <Image width={100} height={100} style={{position:"relative",height:"100%"}} className='relative self-center object-cover' src={props.img} alt="" />
             

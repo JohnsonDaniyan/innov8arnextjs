@@ -23,9 +23,9 @@ const projects = {
       "img":"https://innov8-ar-bucket.s3.amazonaws.com/Images/Egg+Incubator.png",
       "ytemb":"dH3ndOco4kc"
     },
-    "Mobility":{
-        "sub":"Mobility",
-        "desc":"Description here for Mob",
+    "People's Mobility":{
+        "sub":"Electric solution",
+        "desc":"",
         "link":"https://d2zes9ifb0ot5n.cloudfront.net/Mobility.glb",
         "img":"https://d2zes9ifb0ot5n.cloudfront.net/Mobility.png",
         "ytemb":"ASh1Pm8SJ-s"
@@ -42,21 +42,21 @@ const projects = {
         "desc":"Description here for EI",
         "link":"https://d2zes9ifb0ot5n.cloudfront.net/Walking+Aid/walking+aid2.glb",
         "img":"https://d2zes9ifb0ot5n.cloudfront.net/Walking+Aid/walking+aid2.66.34.png",
-        "ytemb":"OpOXeJAHI1I"
+        "ytemb":"Fdz6zrMmlfc"
     },
     "Soiless Farm":{
         "sub":"Egg Incubator",
         "desc":"Description here for EI",
         "link":"https://d2zes9ifb0ot5n.cloudfront.net/Soiless+Farm/Flooding.glb",
         "img":"https://d2zes9ifb0ot5n.cloudfront.net/Walking+Aid/walking+aid2.66.34.png",
-        "ytemb":"OpOXeJAHI1I"
+        "ytemb":"none"
     },
     "Soil Intelligence":{
         "sub":"Soil Monitoring System",
         "desc":"Used for measuring soil nutrient content",
         "link":"https://d2zes9ifb0ot5n.cloudfront.net/Soil-intelligence/soil-intelligence.glb",
         "img":"https://d2zes9ifb0ot5n.cloudfront.net/Walking+Aid/walking+aid2.66.34.png",
-        "ytemb":"OpOXeJAHI1I"
+        "ytemb":"_FZsg3gQvx0"
     },
     "Mushroom Farm":{
       "sub":"Mushroom Farm",
@@ -70,7 +70,7 @@ const projects = {
         "desc":"Keep Seafood Fresh During Transpotration",
       "link":"https://d2zes9ifb0ot5n.cloudfront.net/farmsphere+low-end2.glb",
       "img":"https://d2zes9ifb0ot5n.cloudfront.net/Mushroom+Farm.png",
-      "ytemb":"dH3ndOco4kc"
+      "ytemb":"MQAAZGhIE2A"
     },
 }
   // export const projects = [
