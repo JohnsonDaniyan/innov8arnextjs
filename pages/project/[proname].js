@@ -44,6 +44,20 @@ const projects = {
         "img":"https://d2zes9ifb0ot5n.cloudfront.net/Walking+Aid/walking+aid2.66.34.png",
         "ytemb":"OpOXeJAHI1I"
     },
+    "Soiless Farm":{
+        "sub":"Egg Incubator",
+        "desc":"Description here for EI",
+        "link":"https://d2zes9ifb0ot5n.cloudfront.net/Soiless+farm/flooding.glb",
+        "img":"https://d2zes9ifb0ot5n.cloudfront.net/Walking+Aid/walking+aid2.66.34.png",
+        "ytemb":"OpOXeJAHI1I"
+    },
+    "Soil Intelligence":{
+        "sub":"Egg Incubator",
+        "desc":"Description here for EI",
+        "link":"https://d2zes9ifb0ot5n.cloudfront.net/Soil-intelligence/soil-intelligence.glb",
+        "img":"https://d2zes9ifb0ot5n.cloudfront.net/Walking+Aid/walking+aid2.66.34.png",
+        "ytemb":"OpOXeJAHI1I"
+    },
     "Mushroom Farm":{
       "sub":"Mushroom Farm",
       "desc":"Description here for MF",
@@ -91,8 +105,8 @@ function Project() {
     console.log(currProj)
     if (JSON.stringify(currProj) === '{}'){return(<div>loading</div>)}
     return (
-        <div className="inProject box-border p-5 h-screen  bg-gray-100 flex flex-col">
-        <div className=' bg-inherit md:bg-gray-100 overflow-hidden relative  h-[59.4%] w-fill rounded-2xl flex flex-col items-center justify-center'>
+        <div className="inProject box-border p-5 h-screen  bg-gray-100 flex flex-col md:flex-row">
+        <div className=' bg-inherit md:bg-gray-100 overflow-hidden relative md:w-1/2 md:h-full h-[59.4%] w-fill rounded-2xl flex flex-col items-center justify-center'>
             <div className=" z-20 absolute top-[9.5px] left-[9.5px]">
               <Link  href='/'>
               <Image style={{position:"absolute"}} src={back} className="" alt=''></Image>
@@ -106,7 +120,7 @@ function Project() {
               <p className='text-sm'>{projects[proname].sub}</p>
           </div>
         </div>
-        <div className="info w-fill  box-border mt-5 flex-grow">
+        <div className="info w-fill md:w-1/2 box-border mt-5 flex-grow">
           <div className="switcher w-fill">
             <div className="text w-fill flex justify-around"> 
               <div className="text1 text-center cursor-pointer font-bold w-1/2 text-gray-500" onClick={()=>{setView(0)}}>Problem Statement</div>
@@ -123,8 +137,8 @@ function Project() {
                 <h1 className={`font-bold text-2xl transition-all delay-150  duration-500 translate-x-0${view===1? "  -translate-x-full":""}`}>{proname}</h1>
                 <p className={`block text-sm transition-transform delay-250  duration-500 translate-x-0${view===1? " -translate-x-full":""}`}>{projects[proname].desc}</p>
             </div> 
-            <div className={` absolute w-full h-full top-0 py-1 text-black text-left bottom-0 overflow-hidden transition-opacity duration-500 opacity-0 ${view!==0? "delay-500 opacity-100":""}`}>
-                <small className={`block text-gray-400 text-xs  -translate-x-full transition-transform delay-300 ${view!==0? " translate-x-1":""} `}>Proposed Solution</small>
+            <div className={` absolute w-full h-full top-0 py-1 text-black text-left bottom-0 overflow-hidden transition-opacity duration-500 opacity-0 pointer-events-none ${view!==0? "delay-500 opacity-100 pointer-events-auto":""}`}>
+                
                 <YoutubeEmbed className="aspect-video" embedId={projects[proname].ytemb}/>
             </div>
           </div>
