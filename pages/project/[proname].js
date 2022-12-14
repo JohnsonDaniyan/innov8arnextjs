@@ -37,6 +37,13 @@ const projects = {
         "img":"https://d2zes9ifb0ot5n.cloudfront.net/Egg+incubator.png",
         "ytemb":"OpOXeJAHI1I"
     },
+    "Walking Aid":{
+        "sub":"Egg Incubator",
+        "desc":"Description here for EI",
+        "link":"https://d2zes9ifb0ot5n.cloudfront.net/Walking+Aid/walking+aid2.glb",
+        "img":"https://d2zes9ifb0ot5n.cloudfront.net/Walking+Aid/walking+aid2.66.34.png",
+        "ytemb":"OpOXeJAHI1I"
+    },
     "Mushroom Farm":{
       "sub":"Mushroom Farm",
       "desc":"Description here for MF",
