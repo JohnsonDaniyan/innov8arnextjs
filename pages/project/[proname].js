@@ -8,12 +8,43 @@ import { Suspense } from 'react'
 import Link from 'next/link'
 import {AiFillYoutube} from 'react-icons/ai'
 import YoutubeEmbed from '../../components/youtubeEmbed/YoutubeEmbed'
-import projects from '../../data'
+// import projects from '../../data'
 
 const Viewer = dynamic(
     () => import('../../components/Viewer'),
     { ssr: false }
   )
+
+const projects = {
+  "Vaccine Cooling System":{
+      "sub":"(vcs)",
+      "desc":"",
+      "link":"https://d2zes9ifb0ot5n.cloudfront.net/vcs.glb",
+      "img":"https://innov8-ar-bucket.s3.amazonaws.com/Images/Egg+Incubator.png",
+      "ytemb":"dH3ndOco4kc"
+    },
+    "Mobility":{
+        "sub":"Mobility",
+        "desc":"Description here for Mob",
+        "link":"https://d2zes9ifb0ot5n.cloudfront.net/Mobility.glb",
+        "img":"https://d2zes9ifb0ot5n.cloudfront.net/Mobility.png",
+        "ytemb":"ASh1Pm8SJ-s"
+    },
+    "Egg Incubator":{
+        "sub":"Egg Incubator",
+        "desc":"Description here for EI",
+        "link":"https://d2zes9ifb0ot5n.cloudfront.net/Egg+incubator1.glb",
+        "img":"https://d2zes9ifb0ot5n.cloudfront.net/Egg+incubator.png",
+        "ytemb":"OpOXeJAHI1I"
+    },
+    "Mushroom Farm":{
+      "sub":"Mushroom Farm",
+      "desc":"Description here for MF",
+      "link":"https://d2zes9ifb0ot5n.cloudfront.net/mushroom+farm4.glb",
+      "img":"https://d2zes9ifb0ot5n.cloudfront.net/Mushroom+Farm.png",
+      "ytemb":"dH3ndOco4kc"
+    },
+}
   // export const projects = [
   //   {
   //     "name":"Vaccine Cooling System",
@@ -43,12 +74,15 @@ const Viewer = dynamic(
 
 function Project() {
     const router = useRouter()
-    const { proname } = router.query;
-    
+    const {proname} = router.query;
+    const [currProj, setCurrProj] = useState({})
     const [view, setView] = useState(0);
-  console.log(projects.proname)
-    // console.log(project.name)
-    
+
+    useEffect(() =>{
+      setCurrProj(projects[proname])
+    },[proname])
+    console.log(currProj)
+    if (JSON.stringify(currProj) === '{}'){return(<div>loading</div>)}
     return (
         <div className="inProject box-border p-5 h-screen  bg-gray-100 flex flex-col">
         <div className=' bg-inherit md:bg-gray-100 overflow-hidden relative  h-[59.4%] w-fill rounded-2xl flex flex-col items-center justify-center'>
@@ -58,11 +92,11 @@ function Project() {
               </Link>
               </div> 
             <Suspense fallback={`Loading...`}>
-            <Viewer ></Viewer> 
+            <Viewer link={projects[proname].link}></Viewer> 
             </Suspense>
             <div style={{zIndex:"-1"}} className='w-full p-5 pt-10 text-black absolute text-left bottom-0 '>
               <h1 className='font-bold text-2xl'> {proname} </h1>
-              <p className='text-sm'>(VCS) pharmaceutical cooling solution</p>
+              <p className='text-sm'>{projects[proname].sub}</p>
           </div>
         </div>
         <div className="info w-fill  box-border mt-5 flex-grow">
@@ -80,11 +114,11 @@ function Project() {
             <div className={` py-2 text-black text-left bottom-0 overflow-hidden transition-all delay-300 duration-500${view===1? " opacity-0":""}`}>
                 <small className={` block text-gray-400 text-xs transition-transform duration-1000 translate-x-0 ${view===1? " -translate-x-full":""}`}>Problem Statement</small>
                 <h1 className={`font-bold text-2xl transition-all delay-150  duration-500 translate-x-0${view===1? "  -translate-x-full":""}`}>{proname}</h1>
-                <p className={`block text-sm transition-transform delay-250  duration-500 translate-x-0${view===1? " -translate-x-full":""}`}>The ever-present issue of cooling and storage of pharmaceutical instruments has taken a toll on the health industry of Nigeria, in this project we aim to aleviate issues through an innovative solution </p>
+                <p className={`block text-sm transition-transform delay-250  duration-500 translate-x-0${view===1? " -translate-x-full":""}`}>{projects[proname].desc}</p>
             </div> 
-            <div className={` absolute w-full h-full top-0 py-10 text-black text-left bottom-0 overflow-hidden transition-opacity duration-500 opacity-0 ${view!==0? "delay-500 opacity-100":""}`}>
+            <div className={` absolute w-full h-full top-0 py-1 text-black text-left bottom-0 overflow-hidden transition-opacity duration-500 opacity-0 ${view!==0? "delay-500 opacity-100":""}`}>
                 <small className={`block text-gray-400 text-xs  -translate-x-full transition-transform delay-300 ${view!==0? " translate-x-1":""} `}>Proposed Solution</small>
-                <YoutubeEmbed embedId="ASh1Pm8SJ-s"/>
+                <YoutubeEmbed className="aspect-video" embedId={projects[proname].ytemb}/>
             </div>
           </div>
         </div>
