@@ -65,6 +65,13 @@ const projects = {
       "img":"https://d2zes9ifb0ot5n.cloudfront.net/Mushroom+Farm.png",
       "ytemb":"dH3ndOco4kc"
     },
+    "Farmisphere":{
+      "sub":"Fresh Produce",
+        "desc":"Keep Seafood Fresh During Transpotration",
+      "link":"https://d2zes9ifb0ot5n.cloudfront.net/farmsphere+low-end2.glb",
+      "img":"https://d2zes9ifb0ot5n.cloudfront.net/Mushroom+Farm.png",
+      "ytemb":"dH3ndOco4kc"
+    },
 }
   // export const projects = [
   //   {
