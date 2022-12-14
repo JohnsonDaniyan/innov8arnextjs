@@ -47,13 +47,13 @@ const projects = {
     "Soiless Farm":{
         "sub":"Egg Incubator",
         "desc":"Description here for EI",
-        "link":"https://d2zes9ifb0ot5n.cloudfront.net/Soiless+farm/flooding.glb",
+        "link":"https://d2zes9ifb0ot5n.cloudfront.net/Soiless+Farm/Flooding.glb",
         "img":"https://d2zes9ifb0ot5n.cloudfront.net/Walking+Aid/walking+aid2.66.34.png",
         "ytemb":"OpOXeJAHI1I"
     },
     "Soil Intelligence":{
-        "sub":"Egg Incubator",
-        "desc":"Description here for EI",
+        "sub":"Soil Monitoring System",
+        "desc":"Used for measuring soil nutrient content",
         "link":"https://d2zes9ifb0ot5n.cloudfront.net/Soil-intelligence/soil-intelligence.glb",
         "img":"https://d2zes9ifb0ot5n.cloudfront.net/Walking+Aid/walking+aid2.66.34.png",
         "ytemb":"OpOXeJAHI1I"

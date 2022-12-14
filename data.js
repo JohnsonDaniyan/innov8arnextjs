@@ -10,7 +10,7 @@
   {
     "name":"Soil Intelligence",
     "sub":"Soil Monitoring System",
-    "desc":"Used for measing soil nutrient content",
+    "desc":"Used for measuring soil nutrient content",
     "link":"https://d2zes9ifb0ot5n.cloudfront.net/Soil-intelligence/soil-intelligence.glb",
     "img":"https://d2zes9ifb0ot5n.cloudfront.net/Soil-intelligence/soil-intelligence.16.9.png"
   },
